@@ -3,5 +3,5 @@ Paper "Instance-Level Multitask Learning for 3D Building Extraction from Off-Nad
 
 # BDH-Dataset
 
-- Google Drive: [link](URL_OF_GOOGLE_DRIVE)
-- Baidu Disk: [link](URL_OF_BAIDU_DISK)
+- Google Drive: [link](https://drive.google.com/file/d/1dNKImrYu0luH_w7Z5vHqRtOyduqMq7FJ/view?usp=sharing)
+- Baidu Disk: [link](https://pan.baidu.com/s/1I2ZGeJkF_ukaMfn3YsQkuw?pwd=emsj) code:emsj
