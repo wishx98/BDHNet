@@ -1,0 +1,4 @@
+# ninja log v5
+1	3087	1692255818279718400	/home/swx/local/codes/BD_HGT/models/maskformer/pixel_decoder/ops/build/temp.linux-x86_64-3.7/home/swx/local/codes/BD_HGT/models/maskformer/pixel_decoder/ops/src/cpu/ms_deform_attn_cpu.o	a6b0b763ec822e12
+10	9602	1692255881318971400	/home/swx/local/codes/BD_HGT/models/maskformer/pixel_decoder/ops/build/temp.linux-x86_64-3.7/home/swx/local/codes/BD_HGT/models/maskformer/pixel_decoder/ops/src/cuda/ms_deform_attn_cuda.o	8be0ace8779a5ee6
+10	14692	1692255886408563600	/home/swx/local/codes/BD_HGT/models/maskformer/pixel_decoder/ops/build/temp.linux-x86_64-3.7/home/swx/local/codes/BD_HGT/models/maskformer/pixel_decoder/ops/src/vision.o	e24e9573bfbf47cb

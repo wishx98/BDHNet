@@ -1,0 +1,52 @@
+MODEL:
+  BACKBONE:
+    FREEZE_AT: 0
+    NAME: "build_resnet_backbone"
+  WEIGHTS: "detectron2://ImageNetPretrained/torchvision/R-50.pkl"
+  MAX_HEIGHT: 300.0
+  MIN_HEIGHT: 0.0
+  PIXEL_MEAN: [85.901, 84.507, 85.715]
+  PIXEL_STD: [52.785, 48.713, 45.626]
+  RESNETS:
+    DEPTH: 50
+    STEM_TYPE: "basic"  # not used
+    STEM_OUT_CHANNELS: 64
+    STRIDE_IN_1X1: False
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+    # NORM: "SyncBN"
+    RES5_MULTI_GRID: [1, 1, 1]  # not used
+DATASETS: 
+  TRAIN: ("bdh_train",)
+  TEST: ("bdh_val",)
+SOLVER:
+  IMS_PER_BATCH: 3 # Set to 1
+  BASE_LR: 0.0001
+  STEPS: (8000, 64000) 
+  MAX_ITER: 80000
+  WARMUP_FACTOR: 1.0
+  WARMUP_ITERS: 10
+  WEIGHT_DECAY: 0.05
+  OPTIMIZER: "ADAMW"
+  BACKBONE_MULTIPLIER: 0.1
+  CHECKPOINT_PERIOD: 10000
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_TYPE: "full_model"
+    CLIP_VALUE: 0.01
+    NORM_TYPE: 2.0
+  AMP:
+    ENABLED: True
+INPUT:
+  IMAGE_SIZE: 1024
+  MIN_SCALE: 0.25
+  MAX_SCALE: 1.00
+  RANDOM_FLIP: "horizontal"
+  FORMAT: "RGB"
+  DATASET_MAPPER_NAME: "bdh_instance_swx"
+TEST:
+  EVAL_PERIOD: 20000
+  DETECTIONS_PER_IMAGE: 200
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: True
+  NUM_WORKERS: 4
+VERSION: 2
